@@ -41,21 +41,18 @@
     <el-main>
       <el-table key="btable" v-loading="loading" :data="reconcList">
         <el-table-column prop="id" label="ID" width="50"/>
-        <el-table-column label="文章类型">
+        <el-table-column label="文章类型" width="80">
           <template slot-scope="scope">{{ termName(scope.row.termId) }}</template>
         </el-table-column>
         <el-table-column prop="title" label="文章名称" />
         <el-table-column :show-overflow-tooltip="true" prop="description" label="文章描述" />
-        <el-table-column prop="deleted" label="发布状态">
+        <el-table-column prop="deleted" label="发布状态" width="80">
           <template slot-scope="scope">
             {{scope.row.deleted === 0 ? '已发布' : '已下架'}}
           </template>
         </el-table-column>
-        <el-table-column prop="createTime" label="创建时间" width="160">
-          <template slot-scope="scope">
-            {{scope.row.createTime}}
-          </template>
-        </el-table-column>
+        <el-table-column prop="createTime" label="创建时间" width="160" />
+        <el-table-column prop="createTime" label="更新时间" width="160" />
         <el-table-column prop="imgUrl" label="文章地址">
           <template slot-scope="scope">
             <a :href="scope.row.imgUrl" target="_blank" title="点击查看大图">
