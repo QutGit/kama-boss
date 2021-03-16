@@ -30,3 +30,19 @@ export function deleteArticle(params) {
     params
   })
 }
+
+export function recoverArticle(params) {
+  return request({
+    url: `${baseUlr}/bossapi/recover`,
+    method: 'delete',
+    params
+  })
+}
+
+export function updateArticle(data) {
+  return request({
+    url: `${baseUlr}/bossapi/update`,
+    method: 'post',
+    data
+  })
+}

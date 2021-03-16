@@ -33,7 +33,7 @@ export const constantRoutes = [
       {
         path: 'carousel',
         name: 'carousel',
-        component: () => import('@/views/setting/carousel'),
+        component: () => import('@/views/home/carousel'),
         meta: { title: '图片列表', icon: 'table' }
       }
     ]
